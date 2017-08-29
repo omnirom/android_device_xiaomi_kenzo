@@ -554,6 +554,10 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib/libmdmdetect.so
 vendor/qcril.db
 
+# Sensors
+etc/sensors/hals.conf
+etc/sensors/sensor_def_qcomdev.conf
+
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
