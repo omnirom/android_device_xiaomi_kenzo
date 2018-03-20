@@ -41,3 +41,17 @@ allow gx_fpd self:{ netlink_socket netlink_generic_socket } create_socket_perms_
 set_prop(gx_fpd, system_prop)
 
 allow gx_fpd gx_fpd_service:service_manager { add find };
+
+allow gx_fpd hal_fingerprint_default:binder { transfer call };
+allow gx_fpd fuse:dir search;
+allow gx_fpd fuse:file { getattr open append };
+allow gx_fpd self:capability dac_override;
+allow gx_fpd storage_file:dir search;
+allow gx_fpd storage_file:lnk_file read;
+allow gx_fpd media_rw_data_file:dir { open read search };
+allow gx_fpd mnt_user_file:dir { getattr search };
+allow gx_fpd mnt_user_file:lnk_file read;
+allow gx_fpd sdcardfs:dir { search write };
+allow gx_fpd sdcardfs:file { getattr append open};
+allow gx_fpd media_rw_data_file:file { getattr append open };
+r_dir_file(gx_fpd, firmware_file)
