@@ -16,6 +16,7 @@
 
 # inherit from common msm8956-common
 -include device/xiaomi/msm8956-common/BoardConfigCommon.mk
+-include device/xiaomi/msm8956-common/omni.dependencies
 
 DEVICE_PATH := device/xiaomi/kenzo
 
